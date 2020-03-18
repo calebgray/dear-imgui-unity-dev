@@ -5,8 +5,6 @@ set (_cimgui_path ${CMAKE_CURRENT_SOURCE_DIR}/../cimgui/)
 
 # general settings
 file(GLOB IMGUI_SOURCES
-    choreographer/Choreographer.cpp
-    choreographer/Blueprints.cpp
     NodeEditor/crude_json.cpp
     NodeEditor/imgui_bezier_math.inl
     NodeEditor/imgui_canvas.cpp
@@ -17,6 +15,8 @@ file(GLOB IMGUI_SOURCES
     ax/Builders.cpp
     ax/Drawing.cpp
     ax/Widgets.cpp
+    choreographer/Blueprints.cpp
+    choreographer/Choreographer.cpp
     imconfig_unity.h
     plugin_custom_assert.cpp
     ${_cimgui_path}cimgui.cpp
