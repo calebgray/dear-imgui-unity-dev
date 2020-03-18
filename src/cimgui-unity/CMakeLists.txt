@@ -5,6 +5,18 @@ set (_cimgui_path ${CMAKE_CURRENT_SOURCE_DIR}/../cimgui/)
 
 # general settings
 file(GLOB IMGUI_SOURCES
+    choreographer/Choreographer.cpp
+    choreographer/Blueprints.cpp
+    NodeEditor/crude_json.cpp
+    NodeEditor/imgui_bezier_math.inl
+    NodeEditor/imgui_canvas.cpp
+    NodeEditor/imgui_extra_math.inl
+    NodeEditor/imgui_node_editor_api.cpp
+    NodeEditor/imgui_node_editor_internal.inl
+    NodeEditor/imgui_node_editor.cpp
+    ax/Builders.cpp
+    ax/Drawing.cpp
+    ax/Widgets.cpp
     imconfig_unity.h
     plugin_custom_assert.cpp
     ${_cimgui_path}cimgui.cpp
@@ -35,7 +47,7 @@ endif (WIN32)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE IMGUI_USER_CONFIG="imconfig_unity.h")
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} choreographer)
 target_include_directories(${PROJECT_NAME} PUBLIC ${_cimgui_path})
 target_include_directories(${PROJECT_NAME} PUBLIC ${_cimgui_path}imgui)
 
